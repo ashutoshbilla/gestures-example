@@ -31,7 +31,11 @@ class PanGestureVC: UIViewController {
         case .began, .changed:
             label.center = CGPoint(x: label.center.x + translation.x, y: label.center.y + translation.y)
 
+            // Sets the Translation value in the coordinate system of the superview.
             sender.setTranslation(CGPoint.zero, in: self.view)
+        case .ended:
+            // Do anything after the user finishes the gesture i.e. lifts the finger(s) from the screen.
+            break
         default:
             break
         }

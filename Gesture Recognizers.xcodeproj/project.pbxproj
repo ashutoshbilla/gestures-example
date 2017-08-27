@@ -62,18 +62,34 @@
 		6C038F471F525C29009C4408 /* Gesture Recognizers */ = {
 			isa = PBXGroup;
 			children = (
-				6C038F481F525C29009C4408 /* AppDelegate.swift */,
+				6CF660381F535D2300A6B797 /* Controllers */,
 				6C038F4E1F525C29009C4408 /* Main.storyboard */,
+				6CF660371F535D1100A6B797 /* Supporting Files */,
+			);
+			path = "Gesture Recognizers";
+			sourceTree = "<group>";
+		};
+		6CF660371F535D1100A6B797 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C038F481F525C29009C4408 /* AppDelegate.swift */,
 				6C038F511F525C29009C4408 /* Assets.xcassets */,
 				6C038F531F525C2A009C4408 /* LaunchScreen.storyboard */,
 				6C038F561F525C2A009C4408 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CF660381F535D2300A6B797 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				6C038F5C1F525D1B009C4408 /* TapGestureVC.swift */,
 				6C038F5E1F525D24009C4408 /* PinchGestureVC.swift */,
 				6C038F601F525D2E009C4408 /* RotationGestureVC.swift */,
 				6C038F621F525D37009C4408 /* SwipeGestureVC.swift */,
 				6C038F641F525D3F009C4408 /* PanGestureVC.swift */,
 			);
-			path = "Gesture Recognizers";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +334,7 @@
 				6C038F5B1F525C2A009C4408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

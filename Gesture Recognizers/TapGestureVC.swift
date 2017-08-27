@@ -28,8 +28,10 @@ class TapGestureVC: UIViewController {
         
         switch sender.numberOfTapsRequired {
         case 1:
+            // Single Tap to bring back the label to its original size.
             label.transform = CGAffineTransform.identity
         case 2:
+            // Double Tap to increase the size of the label by 2 times.
             label.transform = CGAffineTransform(scaleX: 2, y: 2)
         default:
             break

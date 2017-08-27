@@ -28,8 +28,12 @@ class PinchGestureVC: UIViewController {
     func handlePinch(sender: UIPinchGestureRecognizer) {
         switch sender.state {
         case .began, .changed:
+            // Zoom in/out according to the pinch gesture.
             scale = sender.scale
             sender.scale = 1
+        case .ended:
+            // Do anything after the user finishes the gesture i.e. lifts the finger(s) from the screen.
+            break
         default:
             break
         }
