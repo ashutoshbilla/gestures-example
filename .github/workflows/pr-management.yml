@@ -1,0 +1,32 @@
+name: PR Management
+
+on: 
+  pull_request:
+    types: [opened, ready_for_review]
+
+jobs:
+  assign-author:
+    name: Assign Author
+    if: github.event.action == "opened"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Auto-assign PR
+        uses: toshimaru/auto-author-assign@v2.1.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  reviewers-and-labels:
+    name: Assign Reviewers
+    if: github.event.action == "ready_for_review"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add Reviewers
+        uses: kentaro-m/auto-assign-action@v2.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
