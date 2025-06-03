@@ -32,7 +32,7 @@ class SwipeGestureVC: UIViewController {
     }
     
     
-    func handleSwipe(sender: UISwipeGestureRecognizer) {
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case UISwipeGestureRecognizerDirection.up:
             label.center.y -= 30

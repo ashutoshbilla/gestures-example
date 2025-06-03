@@ -24,7 +24,7 @@ class PanGestureVC: UIViewController {
         }
     }
     
-    func handlePan(sender: UIPanGestureRecognizer) {
+    @objc func handlePan(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: self.view)
         
         switch sender.state {

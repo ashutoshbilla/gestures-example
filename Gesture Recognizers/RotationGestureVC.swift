@@ -19,7 +19,7 @@ class RotationGestureVC: UIViewController {
     
     var rotationAngle: CGFloat = 0.0
     
-    func handleRotation(sender: UIRotationGestureRecognizer) {
+    @objc func handleRotation(sender: UIRotationGestureRecognizer) {
         switch sender.state {
         case .began:
             sender.rotation = rotationAngle

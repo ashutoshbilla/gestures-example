@@ -24,7 +24,7 @@ class TapGestureVC: UIViewController {
     }
     
     
-    func handleTap(_ sender: UITapGestureRecognizer) {
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
         
         switch sender.numberOfTapsRequired {
         case 1:

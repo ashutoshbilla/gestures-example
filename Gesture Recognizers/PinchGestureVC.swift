@@ -25,7 +25,7 @@ class PinchGestureVC: UIViewController {
         }
     }
 
-    func handlePinch(sender: UIPinchGestureRecognizer) {
+    @objc func handlePinch(sender: UIPinchGestureRecognizer) {
         switch sender.state {
         case .began, .changed:
             // Zoom in/out according to the pinch gesture.
