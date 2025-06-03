@@ -7,7 +7,7 @@ on:
 jobs:
   assign-author:
     name: Assign Author
-    if: github.event.action == "opened"
+    if: github.event.pull_request == "opened"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
 
   reviewers-and-labels:
     name: Assign Reviewers
-    if: github.event.action == "ready_for_review"
+    if: github.event.pull_request == "ready_for_review"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
