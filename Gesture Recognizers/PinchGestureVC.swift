@@ -12,8 +12,8 @@ class PinchGestureVC: UIViewController {
     
     @IBOutlet weak var label: UILabel! {
         didSet {
-            let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(sender:)))
-            label.addGestureRecognizer(pinch)
+           let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(sender:)))
+         label.addGestureRecognizer(pinch)
         }
     }
 

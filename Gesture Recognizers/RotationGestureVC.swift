@@ -13,7 +13,7 @@ class RotationGestureVC: UIViewController {
     @IBOutlet weak var label: UILabel! {
         didSet {
             let rotation = UIRotationGestureRecognizer(target: self, action: #selector(handleRotation(sender:)))
-            label.addGestureRecognizer(rotation)
+             label.addGestureRecognizer(rotation)
         }
     }
     
@@ -22,7 +22,7 @@ class RotationGestureVC: UIViewController {
     @objc func handleRotation(sender: UIRotationGestureRecognizer) {
         switch sender.state {
         case .began:
-            sender.rotation = rotationAngle
+          sender.rotation = rotationAngle
         case .changed:
             label.transform = CGAffineTransform(rotationAngle: sender.rotation)
         case .ended:

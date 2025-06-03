@@ -25,9 +25,9 @@ class SwipeGestureVC: UIViewController {
             swipeRight.direction = .right
             
             label.addGestureRecognizer(swipeUp)
-            label.addGestureRecognizer(swipeDown)
+             label.addGestureRecognizer(swipeDown)
             label.addGestureRecognizer(swipeLeft)
-            label.addGestureRecognizer(swipeRight)
+              label.addGestureRecognizer(swipeRight)
         }
     }
     
@@ -41,7 +41,7 @@ class SwipeGestureVC: UIViewController {
         case UISwipeGestureRecognizerDirection.left:
             label.center.x -= 30
         case UISwipeGestureRecognizerDirection.right:
-            label.center.x += 30
+             label.center.x += 30
         default:
             break
         }

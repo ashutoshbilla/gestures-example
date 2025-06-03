@@ -15,11 +15,11 @@ class TapGestureVC: UIViewController {
             let singleTap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
             let doubleTap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
             
-            singleTap.numberOfTapsRequired = 1
+          singleTap.numberOfTapsRequired = 1
             doubleTap.numberOfTapsRequired = 2
             
             label.addGestureRecognizer(singleTap)
-            label.addGestureRecognizer(doubleTap)
+           label.addGestureRecognizer(doubleTap)
         }
     }
     
